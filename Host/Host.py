@@ -1,4 +1,3 @@
-import time
 import keyboard
 from twisted.internet import reactor
 from twisted.internet.protocol import DatagramProtocol
