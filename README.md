@@ -11,7 +11,6 @@
 ```python3
 #Required Python3 host libraries:
 import keyboard
-from threading import Thread
 from twisted.internet import reactor
 from twisted.internet.protocol import DatagramProtocol
 class MulticastInputs(DatagramProtocol):
