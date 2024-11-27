@@ -10,6 +10,7 @@ class MulticastPingClient(DatagramProtocol):
             if key in keys:
                 self.transport.write(bytes(key, encoding='utf-8'), ("228.0.0.5", 65535))
     def datagramReceived(self, datagram, address):
-        print(f"Datagram {repr(datagram)} received from {repr(address)}")
+        #print(f"Datagram {repr(datagram)} received from {repr(address)}")
+        pass
 reactor.listenMulticast(65535, MulticastPingClient(), listenMultiple=True)
 reactor.run()
