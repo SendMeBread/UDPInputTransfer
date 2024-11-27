@@ -59,6 +59,7 @@ class MulticastPingClient(DatagramProtocol):
                 self.transport.write(bytes(key, encoding='utf-8'), ("228.0.0.5", 65535)) #send a string, "a"
     def datagramReceived(self, datagram, address):
         #print(f"Datagram {repr(datagram)} received from {repr(address)}") Use for debugging
+	pass
 #Start looking for hosts on the network
 reactor.listenMulticast(65535, MulticastPingClient(), listenMultiple=True)
 reactor.run()
