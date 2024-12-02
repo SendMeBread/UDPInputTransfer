@@ -1,5 +1,5 @@
 import sys
-sys.path += ["../Packages/keyboard", "../Packages/twisted"]
+sys.path.append("../Packages")
 import keyboard
 from twisted.internet import reactor
 from twisted.internet.protocol import DatagramProtocol
