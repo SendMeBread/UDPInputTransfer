@@ -5,3 +5,10 @@
 ---
 
 <h4>The caveat is that each client can only send <strong>one</strong> input.</h4>
+
+<h2>Credits:</h2>
+
+---
+
+[Keyboard Package (By boppreh:](https://github.com/boppreh/keyboard)
+[Twisted Package (By the Twisted Team](https://twisted.org/)
