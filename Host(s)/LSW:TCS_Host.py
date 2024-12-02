@@ -1,10 +1,12 @@
+import sys
+sys.path += ["../Packages/keyboard", "../Packages/twisted"]
 import keyboard
 from twisted.internet import reactor
 from twisted.internet.protocol import DatagramProtocol
 class MulticastInputs(DatagramProtocol):
     def startProtocol(self):
         self.transport.setTTL(5)
-        self.transport.joinGroup("228.0.0.5")
+        self.transport.joinGroup(sys.argv[1])
     def datagramReceived(self, datagram, address):
         print("Host received!")
         if b"w" in datagram:
@@ -23,5 +25,5 @@ class MulticastInputs(DatagramProtocol):
             keyboard.send("up")
         if b"e" in datagram:
             keyboard.send("down")
-reactor.listenMulticast(65535, MulticastInputs(), listenMultiple=True)
+reactor.listenMulticast(int(sys.argv[2]), MulticastInputs(), listenMultiple=True)
 reactor.run()
