@@ -18,12 +18,12 @@ class MulticastInputs(DatagramProtocol):
         if b"d" in datagram:
             keyboard.send("4")
         if b"k" in datagram:
-            keyboard.send("left")
+            keyboard.send("w")
         if b"j" in datagram:
-            keyboard.send("right")
+            keyboard.send("a")
         if b"q" in datagram:
-            keyboard.send("up")
+            keyboard.send("s")
         if b"e" in datagram:
-            keyboard.send("down")
+            keyboard.send("d")
 reactor.listenMulticast(int(sys.argv[2]), MulticastInputs(), listenMultiple=True)
 reactor.run()
