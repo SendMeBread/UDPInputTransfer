@@ -10,20 +10,20 @@ class MulticastInputs(DatagramProtocol):
     def datagramReceived(self, datagram, address):
         print("Host received!")
         if b"w" in datagram:
-            keyboard.send("1")
-        if b"a" in datagram:
-            keyboard.send("2")
-        if b"s" in datagram:
-            keyboard.send("3")
-        if b"d" in datagram:
-            keyboard.send("4")
-        if b"k" in datagram:
             keyboard.send("w")
-        if b"j" in datagram:
+        if b"a" in datagram:
             keyboard.send("a")
-        if b"q" in datagram:
+        if b"s" in datagram:
             keyboard.send("s")
-        if b"e" in datagram:
+        if b"d" in datagram:
             keyboard.send("d")
+        if b"k" in datagram:
+            keyboard.send("k")
+        if b"j" in datagram:
+            keyboard.send("j")
+        if b"q" in datagram:
+            keyboard.send("q")
+        if b"e" in datagram:
+            keyboard.send("e")
 reactor.listenMulticast(int(sys.argv[2]), MulticastInputs(), listenMultiple=True)
 reactor.run()
