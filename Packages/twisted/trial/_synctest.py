@@ -36,7 +36,7 @@ from typing import (
 from unittest import SkipTest
 
 from attrs import frozen
-from typing import ParamSpec
+from typing_extensions import ParamSpec
 
 from twisted.internet.defer import Deferred, ensureDeferred
 from twisted.python import failure, log, monkey

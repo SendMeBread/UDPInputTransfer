@@ -14,7 +14,7 @@ from __future__ import annotations
 from threading import Thread, current_thread
 from typing import Any, Callable, List, Optional, TypeVar
 
-from typing import ParamSpec, Protocol, TypedDict
+from typing_extensions import ParamSpec, Protocol, TypedDict
 
 from twisted._threads import pool as _pool
 from twisted.python import context, log

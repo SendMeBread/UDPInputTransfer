@@ -1,5 +1,6 @@
 import sys
 sys.path.append("../Packages")
+import pyautogui
 import keyboard
 from twisted.internet import reactor
 from twisted.internet.protocol import DatagramProtocol

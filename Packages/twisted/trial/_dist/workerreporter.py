@@ -14,7 +14,7 @@ from typing import Callable, List, Optional, Sequence, Type, TypeVar
 from unittest import TestCase as PyUnitTestCase
 
 from attrs import Factory, define
-from typing import Literal
+from typing_extensions import Literal
 
 from twisted.internet.defer import Deferred, maybeDeferred
 from twisted.protocols.amp import AMP, MAX_VALUE_LENGTH

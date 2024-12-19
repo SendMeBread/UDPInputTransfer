@@ -8,7 +8,7 @@ Test cases for formmethod module.
 
 from typing import Callable, Iterable
 
-from typing import Concatenate, ParamSpec
+from typing_extensions import Concatenate, ParamSpec
 
 from twisted.python import formmethod
 from twisted.trial import unittest

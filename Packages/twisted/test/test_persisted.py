@@ -10,7 +10,7 @@ import sys
 import textwrap
 from typing import Any, Callable, List, Tuple
 
-from typing import NoReturn
+from typing_extensions import NoReturn
 
 # Twisted Imports
 from twisted.persisted import aot, crefutil, styles

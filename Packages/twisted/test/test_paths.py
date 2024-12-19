@@ -20,7 +20,7 @@ from unittest import skipIf
 
 from zope.interface.verify import verifyObject
 
-from typing import NoReturn
+from typing_extensions import NoReturn
 
 from twisted.python import filepath
 from twisted.python.filepath import FileMode, OtherAnyStr

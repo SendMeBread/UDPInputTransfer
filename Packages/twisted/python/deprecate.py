@@ -47,7 +47,8 @@ To deprecate properties you can use::
             '''
 
 
-To mark module-level attributes as being deprecated you can use::
+While it's best to avoid this as it adds performance overhead to *any* usage of
+the module, to mark module-level attributes as being deprecated you can use::
 
     badAttribute = "someValue"
 
@@ -100,7 +101,7 @@ from typing import Any, Callable, Dict, Optional, TypeVar, cast
 from warnings import warn, warn_explicit
 
 from incremental import Version, getVersionString
-from typing import ParamSpec
+from typing_extensions import ParamSpec
 
 _P = ParamSpec("_P")
 _R = TypeVar("_R")
@@ -258,8 +259,13 @@ def _appendToDocstring(thingWithDoc, textToAppend):
     elif len(docstringLines) == 1:
         docstringLines.extend(["", textToAppend, ""])
     else:
-        spaces = docstringLines.pop()
+        trailer = docstringLines[-1]
+        spaces = ""
+        if not trailer.strip():
+            # Deal with differences between Python 3.13 and older versions.
+            spaces = docstringLines.pop()
         docstringLines.extend(["", spaces + textToAppend, spaces])
+        docstringLines = [l.lstrip(" ") for l in docstringLines]
     thingWithDoc.__doc__ = "\n".join(docstringLines)
 
 

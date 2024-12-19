@@ -20,7 +20,7 @@ from typing import TYPE_CHECKING, List, Optional, Tuple, Type, Union
 
 from zope.interface import implementer
 
-from typing import TypeAlias
+from typing_extensions import TypeAlias
 
 from twisted.python import log, reflect
 from twisted.python.components import proxyForInterface

@@ -48,8 +48,6 @@ GENERIC_CI_ENVIRON = {
 }
 
 
-skip = "Not relevant within Debian."
-
 class ExternalTempdirTestCase(TestCase):
     """
     A test case which has mkdir make directories outside of the usual spot, so
@@ -355,8 +353,6 @@ class CommandsTestMixin(StructureAssertingMixin):
     Test mixin for the VCS commands used by the release scripts.
     """
 
-    skip = "Not relevant within Debian."
-
     def setUp(self):
         self.tmpDir = FilePath(self.mktemp())
 
@@ -441,8 +437,6 @@ class GitCommandTest(CommandsTestMixin, ExternalTempdirTestCase):
     Specific L{CommandsTestMixin} related to Git repositories through
     L{GitCommand}.
     """
-
-    skip = "Not relevant within Debian."
 
     createCommand = GitCommand
 

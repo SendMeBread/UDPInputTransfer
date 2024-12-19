@@ -12,7 +12,7 @@ from unittest import skipIf
 
 from zope.interface import implementer
 
-from typing import ParamSpec
+from typing_extensions import ParamSpec
 
 from twisted.internet._resolver import FirstOneWins
 from twisted.internet.base import DelayedCall, ReactorBase, ThreadedResolver

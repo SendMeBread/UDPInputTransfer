@@ -12,7 +12,7 @@ from __future__ import annotations
 import queue as Queue
 from typing import Callable, TypeVar
 
-from typing import ParamSpec
+from typing_extensions import ParamSpec
 
 from twisted.internet import defer
 from twisted.internet.interfaces import IReactorFromThreads

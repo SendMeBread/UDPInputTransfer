@@ -10,7 +10,7 @@ from typing import Callable
 
 from zope.interface.verify import verifyObject
 
-from typing import Protocol
+from typing_extensions import Protocol
 
 from twisted.internet.address import IPv4Address
 from twisted.internet.interfaces import (

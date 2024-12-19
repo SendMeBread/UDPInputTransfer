@@ -20,7 +20,7 @@ from urllib.parse import quote, unquote
 from zope.interface import implementer
 
 from incremental import Version
-from typing import Literal
+from typing_extensions import Literal
 
 from twisted.internet import abstract, interfaces
 from twisted.python import components, filepath, log

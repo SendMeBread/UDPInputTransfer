@@ -24,7 +24,7 @@ from cryptography.hazmat.backends import default_backend
 from cryptography.hazmat.primitives import serialization
 from cryptography.hazmat.primitives.asymmetric import dh, ec, x25519
 from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
-from typing import Literal
+from typing_extensions import Literal
 
 from twisted import __version__ as twisted_version
 from twisted.conch.ssh import _kex, address, keys
@@ -103,17 +103,13 @@ class SSHCiphers:
 
     cipherMap = {
         b"3des-cbc": (algorithms.TripleDES, 24, modes.CBC),
-        b"blowfish-cbc": (algorithms.Blowfish, 16, modes.CBC),
         b"aes256-cbc": (algorithms.AES, 32, modes.CBC),
         b"aes192-cbc": (algorithms.AES, 24, modes.CBC),
         b"aes128-cbc": (algorithms.AES, 16, modes.CBC),
-        b"cast128-cbc": (algorithms.CAST5, 16, modes.CBC),
         b"aes128-ctr": (algorithms.AES, 16, modes.CTR),
         b"aes192-ctr": (algorithms.AES, 24, modes.CTR),
         b"aes256-ctr": (algorithms.AES, 32, modes.CTR),
         b"3des-ctr": (algorithms.TripleDES, 24, modes.CTR),
-        b"blowfish-ctr": (algorithms.Blowfish, 16, modes.CTR),
-        b"cast128-ctr": (algorithms.CAST5, 16, modes.CTR),
         b"none": (None, 0, modes.CBC),
     }
     macMap = {
@@ -295,10 +291,6 @@ def _getSupportedCiphers():
         b"aes192-cbc",
         b"aes128-ctr",
         b"aes128-cbc",
-        b"cast128-ctr",
-        b"cast128-cbc",
-        b"blowfish-ctr",
-        b"blowfish-cbc",
         b"3des-ctr",
         b"3des-cbc",
     ]

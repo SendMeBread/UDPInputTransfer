@@ -15,7 +15,7 @@ from importlib.abc import PathEntryFinder
 from types import ModuleType
 from typing import Any, Generator
 
-from typing import Protocol
+from typing_extensions import Protocol
 
 import twisted
 from twisted.python import modules
@@ -374,7 +374,7 @@ class PathModificationTests(TwistedModulesTestCase):
         self._setupSysPath()
         self._listModules()
 
-    def _test_listingModulesAlreadyImported(self) -> None:
+    def test_listingModulesAlreadyImported(self) -> None:
         """
         Make sure the module list comes back as we expect from iterModules on a
         package, whether zipped or not, even if the package has already been

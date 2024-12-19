@@ -42,7 +42,7 @@ from typing import Callable, Generator, List, Optional, TextIO, Type, Union
 from zope.interface import implementer
 
 from attrs import define
-from typing import ParamSpec, Protocol, TypeAlias, TypeGuard
+from typing_extensions import ParamSpec, Protocol, TypeAlias, TypeGuard
 
 from twisted.internet import defer
 from twisted.python import failure, filepath, log, modules, reflect

@@ -29,7 +29,7 @@ from zipfile import ZipFile
 
 from zope.interface import implementer
 
-from typing import Literal, Self
+from typing_extensions import Literal, Self
 
 from twisted.python.compat import cmp, comparable
 from twisted.python.filepath import (

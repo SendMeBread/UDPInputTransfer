@@ -7,7 +7,7 @@ import os
 import sys
 import types
 
-from typing import NoReturn
+from typing_extensions import NoReturn
 
 from twisted.python import rebuild
 from twisted.trial.unittest import TestCase

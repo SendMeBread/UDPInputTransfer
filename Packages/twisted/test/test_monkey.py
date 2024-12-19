@@ -6,7 +6,7 @@ Tests for L{twisted.python.monkey}.
 """
 from __future__ import annotations
 
-from typing import NoReturn
+from typing_extensions import NoReturn
 
 from twisted.python.monkey import MonkeyPatcher
 from twisted.trial import unittest

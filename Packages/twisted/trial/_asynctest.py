@@ -15,7 +15,7 @@ from typing import Callable, List
 
 from zope.interface import implementer
 
-from typing import ParamSpec
+from typing_extensions import ParamSpec
 
 # We can't import reactor at module-level because this code runs before trial
 # installs a user-specified reactor, installing the default reactor and

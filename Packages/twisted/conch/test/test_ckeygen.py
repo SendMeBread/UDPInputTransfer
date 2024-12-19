@@ -10,11 +10,10 @@ import getpass
 import os
 import subprocess
 import sys
-import os
 from io import StringIO
 from typing import Callable
 
-from typing import NoReturn
+from typing_extensions import NoReturn
 
 from twisted.conch.test.keydata import (
     privateECDSA_openssh,
@@ -88,11 +87,7 @@ class KeyGenTests(TestCase):
             args.extend(["-b", keySize])
         if privateKeySubtype is not None:
             args.extend(["--private-key-subtype", privateKeySubtype])
-        try:
-            subprocess.call(args)
-        except FileNotFoundError:
-            args[0] = 'ckeygen3'
-            subprocess.call(args)
+        subprocess.call(args)
         privKey = Key.fromFile(filename)
         pubKey = Key.fromFile(filename + ".pub")
         if keyType == "ecdsa":
@@ -121,15 +116,7 @@ class KeyGenTests(TestCase):
     def test_runBadKeytype(self) -> None:
         filename = self.mktemp()
         with self.assertRaises(subprocess.CalledProcessError):
-            with open(os.devnull, "rb") as devnull:
-                try:
-                    subprocess.check_call(
-                        ['ckeygen', '-t', 'foo', '-f', filename],
-                        stderr=devnull)
-                except FileNotFoundError:
-                    subprocess.check_call(
-                        ['ckeygen3', '-t', 'foo', '-f', filename],
-                        stderr=devnull)
+            subprocess.check_call(["ckeygen", "-t", "foo", "-f", filename])
 
     def test_enumrepresentation(self) -> None:
         """

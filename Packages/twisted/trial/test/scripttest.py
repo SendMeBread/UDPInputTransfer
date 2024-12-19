@@ -1,4 +1,4 @@
-#! /usr/bin/python3
+#!/usr/bin/env python
 # -*- test-case-name: twisted.trial.test.test_log,twisted.trial.test.test_runner -*-
 
 # Copyright (c) Twisted Matrix Laboratories.

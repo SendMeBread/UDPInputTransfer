@@ -12,7 +12,7 @@ from typing import Any, Callable, Optional
 
 from zope.interface.verify import verifyObject
 
-from typing import NoReturn
+from typing_extensions import NoReturn
 
 import twisted.trial.unittest
 from twisted.python.filepath import FilePath

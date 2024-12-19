@@ -1,4 +1,4 @@
-#! /usr/bin/python3
+#!/usr/bin/env python
 # -*- test-case-name: twisted.mail.test.test_pop3client -*-
 
 # Copyright (c) Twisted Matrix Laboratories.

@@ -22,7 +22,7 @@ from __future__ import annotations
 from random import randrange
 from typing import Any, Callable, TextIO, TypeVar
 
-from typing import ParamSpec
+from typing_extensions import ParamSpec
 
 from twisted.internet import interfaces, utils
 from twisted.python.failure import Failure

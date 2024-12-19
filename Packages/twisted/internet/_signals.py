@@ -44,7 +44,7 @@ from typing import Callable, Optional, Sequence
 from zope.interface import Attribute, Interface, implementer
 
 from attrs import define, frozen
-from typing import Protocol, TypeAlias
+from typing_extensions import Protocol, TypeAlias
 
 from twisted.internet.interfaces import IReadDescriptor
 from twisted.python import failure, log, util

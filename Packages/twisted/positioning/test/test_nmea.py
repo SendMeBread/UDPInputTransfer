@@ -12,7 +12,7 @@ from typing import Callable, Iterable, TypedDict
 from zope.interface import implementer
 
 from constantly import NamedConstant
-from typing import Literal, Protocol
+from typing_extensions import Literal, Protocol
 
 from twisted.positioning import base, ipositioning, nmea
 from twisted.positioning.base import Angles

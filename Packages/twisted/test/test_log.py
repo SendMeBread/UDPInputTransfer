@@ -17,7 +17,7 @@ from typing import Callable, List
 
 from zope.interface import implementer
 
-from typing import Protocol
+from typing_extensions import Protocol
 
 from twisted.logger import (
     ILogObserver,

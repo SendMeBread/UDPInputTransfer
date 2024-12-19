@@ -61,7 +61,7 @@ from typing import (
 
 from zope.interface import Attribute, Interface, implementer
 
-from typing import Literal
+from typing_extensions import Literal
 
 from twisted.python.compat import cmp, comparable
 from twisted.python.runtime import platform

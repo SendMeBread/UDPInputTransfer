@@ -4,7 +4,7 @@ module.
 """
 
 from hamcrest import assert_that, equal_to, has_length
-from typing import NoReturn
+from typing_extensions import NoReturn
 
 # Trial should expose matches_result publically.
 # https://github.com/twisted/twisted/issues/11709

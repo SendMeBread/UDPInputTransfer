@@ -16,7 +16,7 @@ from unittest import TestCase
 from zope.interface import implementer
 
 from attrs import frozen
-from typing import Protocol, TypedDict
+from typing_extensions import Protocol, TypedDict
 
 from twisted.internet.defer import Deferred, DeferredList
 from twisted.internet.error import ProcessDone
